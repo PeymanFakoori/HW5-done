@@ -1,30 +1,16 @@
 
 
-// function printPeerToPeer(arr) {
-//     if (!Array.isArray(arr)) throw new Error("Not an array!");
-//     let result = [];
-//     let len = (arr[0].split('-')).length;
-//     for (let item of arr) {
-//         if (typeof(item) !== 'string') throw new Error("Not a string!");
-//         const itemArr = item.split('-');
-//         if (itemArr.length !== len) throw new Error("Invalid size!");
-//         for (let i = 0; i < itemArr.length; i++) {
-//             if (result[i] === undefined) result = result.concat([[]]);
-//             if (!result[i].includes(itemArr[i])) result[i].push(itemArr[i]);
-//         }
-//     }
-//     return result;
-// }
-// console.log(printPeerToPeer(["a-b-c-d", "a-b-f-g", "m-n-l-k", "m-o-p-j", "v-q-w-e", "x-z-p-j"]));
-
-// let input = ["a-b-c-d", "a-b-f-g", "m-n-l-k", "m-o-p-j", "v-q-w-e", "x-z-p-j"];
-
-
-
-function groupArray (input){
-   let array = []
-   for(let i = 0 ; i<input.length ; i++){
-    array.push(input[i].split('-'))
-   }return array
+function gruopArray(input) {
+    if (!Array.isArray(input)) throw new Error("wrong input");
+    let result = [];
+    for (let item of input) {
+        let array = item.split('-');
+        for (let i = 0; i < array.length; i++) {
+            if (result[i] === undefined) result = result.concat([[]]);
+            if (!result[i].includes(array[i])) result[i].push(array[i]);
+        }
+    }
+    return result;
 }
-console.log(groupArray(["a-b-c-d", "a-b-f-g", "m-n-l-k", "m-o-p-j", "v-q-w-e", "x-z-p-j"]));
+console.log(gruopArray(["a-b-c-d", "a-b-f-g", "m-n-l-k", "m-o-p-j", "v-q-w-e", "x-z-p-j"]));
+
