@@ -1,0 +1,24 @@
+.black-box {
+    background-color: black;
+    height: 450px; 
+    width: 450px;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+}
+.yellow-box {
+    background-color: yellow;
+    height: 250px;
+    width: 250px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+.red-box {   
+    background-color: red;
+    height: 80px;
+    width: 80px;
+    right: 0;
+    bottom: 120px;
+    position: absolute;
+}
